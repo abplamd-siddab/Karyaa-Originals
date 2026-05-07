@@ -1,0 +1,135 @@
+Build the complete contact page — contact.html
+
+Page hero:
+  Height: 280px
+  Background: #0D1B2A
+  Label: GET IN TOUCH
+  Heading: Cormorant Garamond 300, 58px, white: Let us talk.
+  Sub: Cormorant Garamond italic, 28px, rgba(255,255,255,0.5): Your dedicated team could be ready in 2 weeks.
+
+SECTION 1 — Contact form and details:
+  Background: #F7F5F0
+  Padding: 100px 0
+  Two column layout — 55% form, 45% details
+
+  LEFT COLUMN — Contact form:
+    Form heading: Cormorant Garamond 300, 32px, #0D1B2A: Tell us about your business.
+    
+    Fields (all required unless noted):
+    
+    Full name: text input
+    Business name: text input
+    Country: dropdown — UK, USA, Canada, Australia, New Zealand, Other
+    Email address: email input
+    WhatsApp number: tel input (with country code note)
+    
+    Service interested in: radio buttons — styled as pill selectors
+      Data Entry Support — $200/month
+      Research Support — $200/month
+      Full Operations Support — $350/month
+      Simran Pro Plus — $450/month
+      Not sure yet — help me decide
+    
+    Tell us about your business: textarea, 4 rows
+    Placeholder: What products do you import? Which country? What is your biggest operational challenge right now?
+    
+    How did you hear about us: dropdown — LinkedIn, WhatsApp message, Referral from another importer, Google search, Exhibition, Other
+    
+    Submit button:
+      Full width
+      Background: #C8962A
+      Text: Send my enquiry — Jost 400, 14px, white, letter spacing 2px
+      Padding: 16px
+      Border radius: 2px
+      Hover: slightly lighter gold
+    
+    Below button: Jost 200, 11px, #999, italic: We respond to all enquiries within 24 hours during Indian business hours.
+    
+    Form styling:
+      Labels: Jost 400, 12px, #0D1B2A, letter spacing 0.5px, margin bottom 6px
+      Inputs: border 1px solid rgba(0,0,0,0.12), padding 12px 16px, border radius 2px, font Jost 300, 14px
+      Focus: border colour #C8962A, outline none, subtle gold box shadow
+      Background: white
+      Pill selectors: border 1px solid rgba(0,0,0,0.1), padding 10px 16px, border radius 20px, cursor pointer
+      Selected pill: background #C8962A, border #C8962A, text white
+
+    On form submit: show a success message in gold
+    Message: Thank you. We have received your enquiry. Umang or Kaushal will contact you within 24 hours on WhatsApp or email.
+    Do not use any backend — just show the success state client-side after validation
+
+  RIGHT COLUMN — Contact details:
+    Background: #0D1B2A
+    Padding: 40px 36px
+    Border radius: 6px
+    Height: match form column
+
+    Heading: Cormorant Garamond 300, 28px, white: Reach us directly.
+    
+    Detail blocks:
+
+    WhatsApp:
+      Label: WHATSAPP — Jost 300, 10px, #C8962A, letter spacing 3px
+      Value: +91 97244 45451
+      Font: Jost 300, 16px, white
+      Note: Jost 200, 12px, rgba(136,153,187,0.6): Available 10am to 6pm IST, Monday to Saturday
+
+    Email:
+      Label: EMAIL
+      Value: info@karyaa.co
+      Font: Jost 300, 16px, white
+
+    Based in:
+      Label: HEADQUARTERS
+      Value: Ahmedabad, Gujarat, India
+      Font: Jost 300, 15px, white
+      Note: A division of Siddab Ventures Pvt Ltd
+
+    Serving:
+      Label: MARKETS SERVED
+      Five flag-like pills in a row:
+        UK  USA  Canada  AUS  NZ
+        Background: rgba(200,150,42,0.1)
+        Border: 1px solid rgba(200,150,42,0.25)
+        Text: Jost 300, 11px, #C8962A
+        Border radius: 12px
+        Padding: 4px 12px
+
+    Gold divider line between each block
+
+    Bottom of right column:
+      A mini version of the bridge SVG mark — centered, 80px wide, opacity 0.15
+      Below it: karyaa.co in Cormorant Garamond 300, 18px, rgba(200,150,42,0.4)
+
+SECTION 2 — FAQ strip:
+  Background: #0D1B2A
+  Padding: 80px 0
+  
+  Heading: Cormorant Garamond 300, 38px, white: Common questions.
+  
+  Six accordion FAQ items:
+  
+  Q: Can I try for just one month first?
+  A: Our minimum is 3 months, non-negotiable. Recruitment and training takes 3 to 4 weeks. The real value starts in month 2. We offer a replacement guarantee — if anything is not working in month 1, we fix it within 5 working days.
+
+  Q: How quickly can you get someone started?
+  A: We maintain a bench of trained staff ready to assign. Once your setup fee and first month payment are confirmed, your dedicated person can start within 1 week.
+
+  Q: Will they understand my Indian grocery business?
+  A: Yes. Our staff are trained by people with 15 years of direct Indian grocery export experience. They know Indian brands, import terminology, documentation, and supplier relationships.
+
+  Q: What hours do they work?
+  A: Monday to Saturday, 10am to 6pm IST. That is 5:30am to 1:30pm UK time — your tasks are completed before your business day begins.
+
+  Q: What if the person leaves or is unavailable?
+  A: We replace within 5 working days at no extra cost. Our bench model means we always have a trained person ready to step in.
+
+  Q: Is my business data safe?
+  A: Every Karyaa staff member signs a confidentiality agreement. All access is through secure encrypted connections. Your data stays on your systems — we only access what is needed for agreed tasks.
+
+  Accordion styling:
+    Each item: border bottom 1px solid rgba(200,150,42,0.12)
+    Question: Jost 400, 15px, white, padding 20px 0, cursor pointer
+    Gold plus/minus icon on right — toggles on click
+    Answer: Jost 300, 14px, rgba(136,153,187,0.8), line height 1.75, padding bottom 20px
+    Smooth height animation on open/close using max-height transition
+    Open state: question text turns gold

@@ -823,6 +823,388 @@ body {
 }
 
 /* --------------------------------------------------------------------------
+   Services page — Hero
+   -------------------------------------------------------------------------- */
+
+.svc-hero {
+  position: relative;
+  height: 320px;
+  background-color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.svc-hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  max-width: 80vw;
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+}
+
+.svc-hero-watermark svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.svc-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.svc-hero-heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 58px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-text-on-dark);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.svc-hero-sub {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   Services — Section 1: Packages
+   -------------------------------------------------------------------------- */
+
+.pkg-section {
+  background-color: var(--color-light-gold);
+  padding: 100px 0;
+}
+
+.pkg-intro {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.pkg-heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 42px;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.pkg-sub {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  color: #667788;
+  max-width: none;
+}
+
+.pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* Base card */
+.pkg-card {
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 36px 28px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.pkg-card:hover {
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.12);
+  border-color: color-mix(in srgb, var(--card-accent) 30%, transparent);
+}
+
+/* Featured card */
+.pkg-card--featured {
+  border-color: rgba(200, 150, 42, 0.45);
+  background: linear-gradient(160deg, #fffdf7 0%, #fff 60%);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(200, 150, 42, 0.2);
+}
+
+.pkg-card--featured:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(200, 150, 42, 0.4);
+}
+
+/* Badge */
+.pkg-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.pkg-badge--featured {
+  background: rgba(200, 150, 42, 0.12);
+  color: var(--color-gold-accent);
+}
+
+/* Name */
+.pkg-name {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+  margin-bottom: 16px;
+  letter-spacing: 0;
+}
+
+/* Price */
+.pkg-price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.pkg-currency {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--color-primary-dark);
+  line-height: 1;
+}
+
+.pkg-amount {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--color-primary-dark);
+  letter-spacing: -0.02em;
+}
+
+.pkg-period {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14px;
+  color: #99aabb;
+  line-height: 1;
+}
+
+/* Subtitle */
+.pkg-subtitle {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  color: #667788;
+  margin-bottom: 28px;
+  max-width: none;
+}
+
+/* Divider between top and features */
+.pkg-card-top {
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  margin-bottom: 24px;
+}
+
+/* Features list */
+.pkg-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  margin-bottom: 28px;
+}
+
+.pkg-features li {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #445566;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pkg-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--card-accent);
+  border-bottom: 1.5px solid var(--card-accent);
+  transform: rotate(-45deg);
+}
+
+/* CTA button */
+.pkg-cta {
+  display: block;
+  text-align: center;
+  padding: 12px 20px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid var(--card-accent);
+  color: var(--card-accent);
+  background: transparent;
+  transition: background 220ms ease, color 220ms ease;
+  margin-top: auto;
+}
+
+.pkg-cta:hover {
+  background: var(--card-accent);
+  color: #ffffff;
+}
+
+.pkg-cta--featured {
+  background: var(--color-gold-accent);
+  color: #ffffff;
+  border-color: var(--color-gold-accent);
+}
+
+.pkg-cta--featured:hover {
+  background: #d9a73d;
+  border-color: #d9a73d;
+}
+
+/* --------------------------------------------------------------------------
+   Services — Section 2: Commercial terms
+   -------------------------------------------------------------------------- */
+
+.terms-section {
+  background-color: var(--color-primary-dark);
+  padding: 80px 0;
+}
+
+.terms-heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 38px;
+  color: var(--color-text-on-dark);
+  margin-bottom: 56px;
+  line-height: 1.2;
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 40px;
+}
+
+.term-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.term-number {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1;
+  color: rgba(200, 150, 42, 0.5);
+}
+
+.term-title {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-text-on-dark);
+  line-height: 1.4;
+}
+
+.term-desc {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(136, 153, 187, 0.75);
+  max-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   Services — Section 3: CTA Banner
+   -------------------------------------------------------------------------- */
+
+.svc-cta-banner {
+  background-color: var(--color-gold-accent);
+  padding: 60px 0;
+}
+
+.svc-cta-inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.svc-cta-text {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #ffffff;
+  max-width: none;
+}
+
+.svc-cta-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 220ms ease;
+}
+
+.svc-cta-btn:hover {
+  background-color: #142438;
+}
+
+/* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
 
@@ -848,6 +1230,41 @@ body {
     display: none;
   }
 
+  /* Services hero */
+  .svc-hero {
+    height: auto;
+    min-height: 240px;
+    padding: var(--space-6) 0;
+  }
+
+  .svc-hero-heading {
+    font-size: 38px;
+  }
+
+  .svc-hero-sub {
+    font-size: 20px;
+  }
+
+  /* Services packages — 2×2 on tablet/mobile */
+  .pkg-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .pkg-card--featured {
+    transform: none;
+  }
+
+  .pkg-amount {
+    font-size: 42px;
+  }
+
+  /* Terms — 2 cols on tablet */
+  .terms-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 28px;
+  }
+
   /* Why section — stacked columns on mobile */
   .why-inner {
     grid-template-columns: 1fr;
@@ -868,6 +1285,11 @@ body {
 
   .why-right {
     grid-template-columns: 1fr;
+  }
+
+  /* CTA banner responsive */
+  .svc-cta-text {
+    font-size: 26px;
   }
 
   /* Nav */

@@ -1,0 +1,78 @@
+Build the complete about page — about.html
+
+Page hero:
+  Same nav
+  Height: 320px
+  Background: #0D1B2A
+  Label: OUR STORY
+  Heading: Cormorant Garamond 300, 58px, white: Built from within the trade.
+  Sub: Cormorant Garamond italic, 28px, rgba(255,255,255,0.5): 15 years of Indian grocery export. Now serving those we supply.
+
+SECTION 1 — The story:
+  Background: #F7F5F0
+  Padding: 100px 0
+  Two column layout:
+
+  Left column:
+    Pull quote in Cormorant Garamond 300, 28px, #0D1B2A, italic:
+    "We started Karyaa because our own buyers kept telling us the same thing — they needed reliable India-based support and could not find it. So we built it."
+    Attribution: — Umang Shah, Founder, Siddab Ventures
+    Font: Jost 300, 12px, #C8962A, letter spacing 2px
+
+    Below the quote: a gold vertical line on the left edge of the pull quote block (3px wide, full height of quote)
+
+  Right column:
+    Three paragraphs in Jost 300, 15px, #445566, line height 1.85:
+    
+    Para 1: Karyaa was born from 15 years of direct experience in the Indian grocery export business. Our parent company, Siddab Ventures, has been exporting Indian groceries to the UK, USA, Canada, Australia, and beyond since 2010. We have shipped hundreds of containers. We have built relationships with importers across the world. And through those relationships, we heard the same frustration again and again.
+    
+    Para 2: Importers needed reliable, trained, India-based staff to handle their day-to-day operations. Data entry. Supplier research. Order management. Documentation. But generic staffing companies did not understand the Indian grocery business. They could not train someone to work in this world. We could — because we live in this world ourselves.
+    
+    Para 3: So in 2026 we launched Karyaa. The Sanskrit word for work. A managed staffing service built from the inside. Where every person we place is trained by people with 15 years of direct industry experience. Where our clients get support that actually understands their business. Where work gets done. Properly.
+
+SECTION 2 — The numbers:
+  Background: #0D1B2A
+  Padding: 80px 0
+  Six stats in a horizontal row:
+
+  15 Years — in Indian grocery export
+  400+ — importer relationships
+  5 Countries — active markets UK USA Canada AUS NZ
+  3 Months — minimum commitment for quality
+  5 Days — replacement guarantee
+  85% — cheaper than local UK hiring
+
+  Numbers: Cormorant Garamond 300, 52px, white
+  Labels: Jost 200, 10px, rgba(136,153,187,0.65), letter spacing 2px
+
+SECTION 3 — Parent company ecosystem:
+  Background: #F7F5F0
+  Padding: 80px 0
+  
+  Heading: Cormorant Garamond 300, 38px, #0D1B2A: The Siddab Ventures ecosystem.
+  Sub: Jost 300, 15px, #667788: Karyaa is one part of a complete solution for Indian grocery importers worldwide.
+
+  Five ecosystem cards in a row:
+
+  Card 1: MESHA Exports — Merchant export of Indian groceries — meshaexports.com
+  Card 2: Siddab Brand — Own manufactured food products — siddab.com
+  Card 3: Zyblz — Technology for Indian grocery importers — zyblz.com
+  Card 4: Karyaa — Managed remote staffing — karyaa.co
+  Card 5: Zyvida — Ayurvedic wellness products — zyvida.com
+
+  Each card:
+    Background: white
+    Border: 1px solid rgba(0,0,0,0.07)
+    Border radius: 4px
+    Padding: 24px 20px
+    Top border: 3px solid — each brand a different colour
+      MESHA: #0A5C6B teal
+      Siddab: #C8962A gold
+      Zyblz: #4A2A8A purple
+      Karyaa: #0D1B2A navy (active — slightly bolder)
+      Zyvida: #1A5C0A green
+    Brand name: Jost 500, 13px, #0D1B2A, letter spacing 1px
+    Description: Jost 300, 12px, #667788, line height 1.6
+    Domain: Jost 200, 10px, #C8962A, letter spacing 1px, margin top auto
+
+  On mobile: 2x2 grid plus one centered below

@@ -1,0 +1,111 @@
+Build the complete services page — services.html
+
+Page hero:
+  Same nav as index.html
+  Hero height: 320px
+  Background: #0D1B2A
+  Small gold label: OUR SERVICES
+  Main heading: Cormorant Garamond 300, 58px: What we offer.
+  Sub heading: Cormorant Garamond 300 italic, 28px, rgba(255,255,255,0.5): Dedicated support. Real results.
+  Subtle bridge watermark in background at 0.04 opacity
+
+SECTION 1 — Four service packages:
+  Background: #F7F5F0
+  Padding: 100px 0
+  
+  Section heading: Cormorant Garamond 300, 42px, #0D1B2A: Choose your support level.
+  Section sub: Jost 300, 15px, #667788: All packages include a dedicated person, daily task logs, and our replacement guarantee.
+  
+  Four cards in a row (2x2 on tablet, 1 column on mobile):
+
+  Card 1 — DATA ENTRY SUPPORT — $200/month
+    Highlight colour: #0A5C6B (teal)
+    Badge: PART TIME · 4 HRS/DAY
+    Price: $200 per month
+    Subtitle: Perfect for solo importers
+    Features list:
+      Product catalogue management
+      Order processing and tracking
+      Inventory and stock updates
+      Invoice entry and filing
+      Weekly summary report
+    CTA button: Get started
+
+  Card 2 — RESEARCH SUPPORT — $200/month
+    Highlight colour: #4A2A8A (purple)
+    Badge: PART TIME · 4 HRS/DAY
+    Price: $200 per month
+    Subtitle: Intelligence for your business
+    Features list:
+      Supplier sourcing in India
+      Competitive pricing research
+      Product sourcing and alternatives
+      Market trend research
+      Weekly research report
+    CTA button: Get started
+
+  Card 3 — FULL OPERATIONS SUPPORT — $350/month
+    Highlight colour: #C8962A (gold)
+    Badge: MOST POPULAR · FULL TIME · 8 HRS/DAY
+    Price: $350 per month
+    Subtitle: Complete operational relief
+    Features list:
+      All data entry tasks included
+      All research tasks included
+      Supplier communication on your behalf
+      Order management end to end
+      Daily task log and weekly report
+    CTA button: Get started
+    Mark this card as featured — slightly larger, gold border, subtle gold background tint
+
+  Card 4 — SIMRAN PRO PLUS — $450/month
+    Highlight colour: #0D1B2A (navy)
+    Badge: PREMIUM · TECH + PEOPLE
+    Price: $450 per month
+    Subtitle: Technology plus dedicated team
+    Features list:
+      Full operations support included
+      Zyblz technology platform included
+      Person uses platform for all tasks
+      Container tracking and reporting
+      Full business dashboard access
+    CTA button: Get started
+
+  All cards:
+    Background: white
+    Border radius: 6px
+    Border: 1px solid rgba(0,0,0,0.08)
+    Padding: 36px 28px
+    Box shadow: very subtle 0 2px 20px rgba(0,0,0,0.06)
+    Hover: shadow increases slightly, border gets highlight colour tint
+
+  Price display:
+    Currency symbol: Jost 300, 20px
+    Amount: Cormorant Garamond 300, 52px
+    /month: Jost 300, 14px, grey
+
+SECTION 2 — Commercial terms:
+  Background: #0D1B2A
+  Padding: 80px 0
+  
+  Heading: Cormorant Garamond 300, 38px, white: Simple, transparent terms.
+  
+  Six terms in a 3x2 grid:
+  
+  Each term:
+    Gold number: 01, 02, 03 etc — Cormorant Garamond 300, 28px, rgba(200,150,42,0.5)
+    Title: Jost 400, 14px, white
+    Description: Jost 300, 13px, rgba(136,153,187,0.75), line height 1.7
+
+  Term 01: Minimum commitment — 3 months, non-negotiable. Recruitment and training takes 3 to 4 weeks. Real value starts in month 2.
+  Term 02: Setup fee — $150 one-time, non-refundable. Covers recruitment, background verification, training, and system setup.
+  Term 03: Payment timing — Setup fee before recruitment. Month 1 before service starts. Monthly advance thereafter.
+  Term 04: Replacement guarantee — New person within 5 working days if current person unavailable, at no extra cost.
+  Term 05: Non-poaching clause — $1,200 buyout fee if you hire our staff directly within 12 months of contract end.
+  Term 06: Renewal discount — 10% discount for committing to a further 3 months before your current period expires.
+
+SECTION 3 — One-line CTA banner:
+  Background: #C8962A
+  Text: Cormorant Garamond 300, 36px, white: Ready to get your dedicated team?
+  Button: Talk to us today — dark navy background, white text
+  Centred, padding 60px 0

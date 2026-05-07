@@ -1,0 +1,71 @@
+Build the footer component and add it to all four pages — index.html, services.html, about.html, contact.html
+
+Footer specifications:
+  Background: #080F18 — slightly darker than the main navy
+  Border top: 1px solid rgba(200,150,42,0.12)
+  Padding: 64px 0 32px
+
+  Four column layout on desktop:
+
+  Column 1 — Brand (30% width):
+    Large bridge SVG logo mark — 60px height — gold on dark
+    Below mark: karyaa in Cormorant Garamond 300, 24px, white
+    Tagline: WORK THAT BRIDGES WORLDS in Jost 200, 9px, rgba(200,150,42,0.6), letter spacing 4px
+    
+    Paragraph below: Jost 300, 13px, rgba(136,153,187,0.65), line height 1.7:
+    Dedicated India-based operations staff for Indian grocery importers worldwide. Managed, trained, and quality monitored by people who understand your business.
+    
+    Social links row:
+      LinkedIn icon link — outline icon, gold on hover
+      WhatsApp icon link — outline icon, gold on hover
+      Instagram icon link — outline icon, gold on hover
+      Icons: 18px, colour rgba(136,153,187,0.5) default, #C8962A on hover
+
+  Column 2 — Services (20% width):
+    Heading: SERVICES in Jost 400, 11px, #C8962A, letter spacing 3px
+    Links list in Jost 300, 13px, rgba(136,153,187,0.7):
+      Data Entry Support
+      Research Support
+      Full Operations Support
+      Simran Pro Plus
+      Pricing and Terms
+    Each link: hover turns white, smooth transition
+
+  Column 3 — Company (20% width):
+    Heading: COMPANY
+    Links: About Karyaa, Our Story, The Ecosystem, Contact Us, karyaa.co
+
+  Column 4 — Contact (30% width):
+    Heading: REACH US
+    
+    WhatsApp: +91 97244 45451
+    Email: info@karyaa.co
+    Location: Ahmedabad, Gujarat, India
+    
+    Each: Jost 300, 13px, rgba(136,153,187,0.7)
+    Icon before each: small inline SVG or unicode symbol in gold
+
+    Markets row:
+      UK · USA · Canada · Australia · NZ
+      Jost 200, 11px, rgba(136,153,187,0.45), letter spacing 1px
+
+  Gold divider line — full width, 1px, rgba(200,150,42,0.12) — separating main footer from bottom strip
+
+  Bottom strip — single row:
+    Left: © 2026 Karyaa · A division of Siddab Ventures Pvt Ltd · All rights reserved
+    Right: Designed with purpose · Ahmedabad, India
+    Font: Jost 200, 11px, rgba(136,153,187,0.35), letter spacing 1px
+
+  On mobile: all columns stack vertically. Bottom strip stacks to two lines centered.
+
+After adding the footer — do a full review of all four pages and make sure:
+  Navigation is consistent across all pages
+  Footer is consistent across all pages
+  All internal links work correctly
+  The active nav link highlights on each page correctly
+  All fonts are loading correctly from Google Fonts
+  All colours match the brand palette exactly
+  The site is fully responsive at 375px, 768px, and 1280px viewport widths
+  Smooth scroll is working
+  The contact form validates all required fields before showing the success message
+  All FAQ accordions open and close smoothly
