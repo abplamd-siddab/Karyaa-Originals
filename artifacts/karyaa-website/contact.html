@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact — Karyaa</title>
-    <meta name="description" content="Get in touch with Karyaa to discuss your staffing needs." />
+    <meta name="description" content="Get in touch with Karyaa to discuss your cross-border staffing needs." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/animations.css" />
   </head>
@@ -15,16 +15,349 @@
     <script src="/js/nav.js"></script>
 
     <main>
-      <section class="hero">
-        <h1 class="animate-fade-up">Contact</h1>
-        <p class="tagline animate-fade-up delay-200">We'd love to hear from you.</p>
-        <form id="contact-form" class="contact-form animate-fade-up delay-300" novalidate>
-          <label>Name<input type="text" name="name" required /></label>
-          <label>Email<input type="email" name="email" required /></label>
-          <label>Message<textarea name="message" rows="4" required></textarea></label>
-          <button type="submit">Send</button>
-        </form>
+
+      <!-- ================================================================
+           HERO
+           ================================================================ -->
+      <section class="contact-hero">
+        <div class="contact-hero-watermark" aria-hidden="true">
+          <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+            <line x1="3" y1="44" x2="77" y2="44" stroke="#C8962A" stroke-width="2" stroke-linecap="round"/>
+            <rect x="17.5" y="14" width="3" height="30" fill="#C8962A"/>
+            <rect x="12.5" y="11" width="13" height="3" fill="#C8962A" rx="0.5"/>
+            <rect x="14"   y="19" width="10" height="2" fill="#C8962A" rx="0.5"/>
+            <rect x="15.5" y="29" width="7"  height="2" fill="#C8962A" rx="0.5"/>
+            <rect x="59.5" y="14" width="3" height="30" fill="#C8962A"/>
+            <rect x="54.5" y="11" width="13" height="3" fill="#C8962A" rx="0.5"/>
+            <rect x="56"   y="19" width="10" height="2" fill="#C8962A" rx="0.5"/>
+            <rect x="57.5" y="29" width="7"  height="2" fill="#C8962A" rx="0.5"/>
+            <path d="M 3,44 L 19,13 Q 40,28 61,13 L 77,44" fill="none" stroke="#C8962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="19" y1="13" x2="8"  y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="19" y1="13" x2="13" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="61" y1="13" x2="72" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="61" y1="13" x2="67" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="29.5" y1="18" x2="29.5" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="40"   y1="20" x2="40"   y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+            <line x1="50.5" y1="18" x2="50.5" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+            <circle cx="3"  cy="44" r="2.5" fill="#C8962A"/>
+            <circle cx="77" cy="44" r="2.5" fill="#C8962A"/>
+          </svg>
+        </div>
+
+        <div class="contact-hero-content">
+          <div class="section-label">
+            <span class="section-label-line"></span>
+            <span class="section-label-text">Get in Touch</span>
+          </div>
+          <h1 class="contact-hero-heading">Let's Build Something<br>Together</h1>
+          <p class="contact-hero-sub">Tell us about your business — we'll respond within one working day.</p>
+        </div>
       </section>
+
+      <!-- ================================================================
+           CONTACT SPLIT SECTION
+           ================================================================ -->
+      <section class="contact-split">
+        <div class="contact-split-inner">
+
+          <!-- LEFT: Form -->
+          <div class="contact-form-col">
+
+            <!-- Form state -->
+            <div id="contact-form-wrap">
+              <h2 class="contact-form-heading">Send Us a Message</h2>
+              <p class="contact-form-sub">All fields marked <span class="req-star">*</span> are required.</p>
+
+              <form id="contact-form" class="cf" novalidate>
+
+                <!-- Row: Name + Business -->
+                <div class="cf-row">
+                  <div class="cf-field">
+                    <label class="cf-label" for="cf-name">Full Name <span class="req-star">*</span></label>
+                    <input class="cf-input" type="text" id="cf-name" name="name" placeholder="Jane Smith" autocomplete="name" required />
+                    <span class="cf-error" id="err-name"></span>
+                  </div>
+                  <div class="cf-field">
+                    <label class="cf-label" for="cf-business">Business Name <span class="req-star">*</span></label>
+                    <input class="cf-input" type="text" id="cf-business" name="business" placeholder="Acme Corp" autocomplete="organization" required />
+                    <span class="cf-error" id="err-business"></span>
+                  </div>
+                </div>
+
+                <!-- Country -->
+                <div class="cf-field">
+                  <label class="cf-label" for="cf-country">Country <span class="req-star">*</span></label>
+                  <div class="cf-select-wrap">
+                    <select class="cf-input cf-select" id="cf-country" name="country" required>
+                      <option value="" disabled selected>Select your country…</option>
+                      <option>United Arab Emirates</option>
+                      <option>Saudi Arabia</option>
+                      <option>Qatar</option>
+                      <option>Kuwait</option>
+                      <option>Bahrain</option>
+                      <option>Oman</option>
+                      <option>United Kingdom</option>
+                      <option>United States</option>
+                      <option>Canada</option>
+                      <option>Australia</option>
+                      <option>India</option>
+                      <option>Pakistan</option>
+                      <option>Philippines</option>
+                      <option>Other</option>
+                    </select>
+                    <span class="cf-select-arrow" aria-hidden="true">
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1L6 7L11 1" stroke="#C8962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                  <span class="cf-error" id="err-country"></span>
+                </div>
+
+                <!-- Row: Email + WhatsApp -->
+                <div class="cf-row">
+                  <div class="cf-field">
+                    <label class="cf-label" for="cf-email">Email Address <span class="req-star">*</span></label>
+                    <input class="cf-input" type="email" id="cf-email" name="email" placeholder="jane@acmecorp.com" autocomplete="email" required />
+                    <span class="cf-error" id="err-email"></span>
+                  </div>
+                  <div class="cf-field">
+                    <label class="cf-label" for="cf-whatsapp">WhatsApp Number</label>
+                    <input class="cf-input" type="tel" id="cf-whatsapp" name="whatsapp" placeholder="+971 50 000 0000" autocomplete="tel" />
+                  </div>
+                </div>
+
+                <!-- Service pills -->
+                <div class="cf-field">
+                  <span class="cf-label">Service Required <span class="req-star">*</span></span>
+                  <div class="cf-pills" role="group" aria-label="Service required">
+                    <label class="cf-pill">
+                      <input type="radio" name="service" value="Recruitment — Essential" />
+                      <span>Recruitment — Essential</span>
+                    </label>
+                    <label class="cf-pill">
+                      <input type="radio" name="service" value="Recruitment — Professional" />
+                      <span>Recruitment — Professional</span>
+                    </label>
+                    <label class="cf-pill">
+                      <input type="radio" name="service" value="Recruitment — Executive" />
+                      <span>Recruitment — Executive</span>
+                    </label>
+                    <label class="cf-pill">
+                      <input type="radio" name="service" value="HR Consultancy" />
+                      <span>HR Consultancy</span>
+                    </label>
+                    <label class="cf-pill">
+                      <input type="radio" name="service" value="I'm not sure yet" />
+                      <span>I'm not sure yet</span>
+                    </label>
+                  </div>
+                  <span class="cf-error" id="err-service"></span>
+                </div>
+
+                <!-- Message -->
+                <div class="cf-field">
+                  <label class="cf-label" for="cf-message">Tell Us About Your Business <span class="req-star">*</span></label>
+                  <textarea class="cf-input cf-textarea" id="cf-message" name="message" rows="5" placeholder="Describe the role(s) you're looking to fill, your team structure, and any specific requirements…" required></textarea>
+                  <span class="cf-error" id="err-message"></span>
+                </div>
+
+                <!-- How did you hear -->
+                <div class="cf-field">
+                  <label class="cf-label" for="cf-source">How Did You Hear About Us?</label>
+                  <div class="cf-select-wrap">
+                    <select class="cf-input cf-select" id="cf-source" name="source">
+                      <option value="" disabled selected>Select an option…</option>
+                      <option>LinkedIn</option>
+                      <option>Google Search</option>
+                      <option>Referral / Word of mouth</option>
+                      <option>Industry event or conference</option>
+                      <option>Other</option>
+                    </select>
+                    <span class="cf-select-arrow" aria-hidden="true">
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1L6 7L11 1" stroke="#C8962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+
+                <button type="submit" class="cf-submit">
+                  <span>Send Message</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+            <!-- Success state (hidden by default) -->
+            <div id="contact-success" class="contact-success" hidden tabindex="-1">
+              <div class="contact-success-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="19" stroke="#C8962A" stroke-width="1.5"/>
+                  <path d="M12 20L17.5 25.5L28 14" stroke="#C8962A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h2 class="contact-success-heading">Message Received</h2>
+              <p class="contact-success-body">Thank you for reaching out. One of our team will be in touch within one working day.</p>
+              <button class="contact-success-reset" id="contact-reset">Send another message</button>
+            </div>
+
+          </div><!-- /contact-form-col -->
+
+          <!-- RIGHT: Details panel -->
+          <div class="contact-details-panel">
+
+            <div class="cdp-inner">
+
+              <div class="cdp-block">
+                <span class="cdp-label">WhatsApp</span>
+                <a href="https://wa.me/971000000000" class="cdp-value cdp-link">+971 50 000 0000</a>
+              </div>
+
+              <div class="cdp-divider" aria-hidden="true"></div>
+
+              <div class="cdp-block">
+                <span class="cdp-label">Email</span>
+                <a href="mailto:hello@karyaa.co" class="cdp-value cdp-link">hello@karyaa.co</a>
+              </div>
+
+              <div class="cdp-divider" aria-hidden="true"></div>
+
+              <div class="cdp-block">
+                <span class="cdp-label">Headquarters</span>
+                <p class="cdp-value">
+                  Dubai, United Arab Emirates<br>
+                  <span class="cdp-value-secondary">DIFC — Gate Village</span>
+                </p>
+              </div>
+
+              <div class="cdp-divider" aria-hidden="true"></div>
+
+              <div class="cdp-block">
+                <span class="cdp-label">Markets Served</span>
+                <div class="cdp-pills">
+                  <span class="cdp-pill">GCC</span>
+                  <span class="cdp-pill">UK</span>
+                  <span class="cdp-pill">EU</span>
+                  <span class="cdp-pill">APAC</span>
+                  <span class="cdp-pill">South Asia</span>
+                  <span class="cdp-pill">North America</span>
+                </div>
+              </div>
+
+              <div class="cdp-watermark" aria-hidden="true">
+                <svg class="cdp-watermark-svg" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="3" y1="44" x2="77" y2="44" stroke="#C8962A" stroke-width="2" stroke-linecap="round"/>
+                  <rect x="17.5" y="14" width="3" height="30" fill="#C8962A"/>
+                  <rect x="12.5" y="11" width="13" height="3" fill="#C8962A" rx="0.5"/>
+                  <rect x="14"   y="19" width="10" height="2" fill="#C8962A" rx="0.5"/>
+                  <rect x="15.5" y="29" width="7"  height="2" fill="#C8962A" rx="0.5"/>
+                  <rect x="59.5" y="14" width="3" height="30" fill="#C8962A"/>
+                  <rect x="54.5" y="11" width="13" height="3" fill="#C8962A" rx="0.5"/>
+                  <rect x="56"   y="19" width="10" height="2" fill="#C8962A" rx="0.5"/>
+                  <rect x="57.5" y="29" width="7"  height="2" fill="#C8962A" rx="0.5"/>
+                  <path d="M 3,44 L 19,13 Q 40,28 61,13 L 77,44" fill="none" stroke="#C8962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="19" y1="13" x2="8"  y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+                  <line x1="19" y1="13" x2="13" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+                  <line x1="61" y1="13" x2="72" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+                  <line x1="61" y1="13" x2="67" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+                  <line x1="29.5" y1="18" x2="29.5" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+                  <line x1="40"   y1="20" x2="40"   y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+                  <line x1="50.5" y1="18" x2="50.5" y2="44" stroke="#C8962A" stroke-width="0.8" stroke-linecap="round"/>
+                  <circle cx="3"  cy="44" r="2.5" fill="#C8962A"/>
+                  <circle cx="77" cy="44" r="2.5" fill="#C8962A"/>
+                </svg>
+                <span class="cdp-watermark-text">karyaa.co</span>
+              </div>
+
+            </div>
+          </div><!-- /contact-details-panel -->
+
+        </div>
+      </section>
+
+      <!-- ================================================================
+           FAQ ACCORDION
+           ================================================================ -->
+      <section class="faq-section">
+        <div class="faq-inner">
+
+          <div class="faq-header">
+            <div class="section-label">
+              <span class="section-label-line"></span>
+              <span class="section-label-text">FAQ</span>
+            </div>
+            <h2 class="faq-heading">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="faq-list" id="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What industries do you specialise in?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>We place talent across financial services, professional services, technology, logistics, hospitality, and construction — the sectors most active across the GCC and global corridors we serve. If your sector isn't listed, reach out; our network is broad.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How quickly can you source candidates?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>For most roles, we present a shortlist within five to ten business days of receiving a confirmed brief. Executive searches and highly specialist positions typically take two to four weeks. We will always agree a realistic timeline with you upfront.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Which geographies do you cover?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Our core markets are the GCC (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman), the United Kingdom, and broader Europe. We also source from South Asia, Southeast Asia, and North America — wherever the right talent lives for your role.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Do you offer replacement guarantees?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. All our packages include a guarantee period — ranging from 60 days on the Essential plan to six months on the Executive plan. If a placed candidate leaves within that window for reasons within our remit, we will re-run the search at no additional charge.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do you ensure cultural and professional fit?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>We invest time at the brief stage to understand your organisation's culture, management style, and team dynamics — not just the job spec. Every candidate undergoes structured competency and values interviews before we present them, and we are transparent about any reservations we have.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What do I need to get started?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>A conversation is enough to begin. Fill in the form above or contact us directly on WhatsApp — we will send across a simple intake document and schedule a 30-minute briefing call. There are no upfront fees until you confirm a placement.</p>
+              </div>
+            </div>
+
+          </div><!-- /faq-list -->
+        </div>
+      </section>
+
     </main>
 
     <script type="module" src="/js/main.js"></script>
