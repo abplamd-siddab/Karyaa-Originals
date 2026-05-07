@@ -430,6 +430,196 @@ p {
 }
 
 /* --------------------------------------------------------------------------
+   Trust strip — Section A
+   -------------------------------------------------------------------------- */
+
+.trust-strip {
+  background-color: rgba(200, 150, 42, 0.06);
+  border-top: 1px solid rgba(200, 150, 42, 0.12);
+  border-bottom: 1px solid rgba(200, 150, 42, 0.12);
+  padding: 28px 0;
+}
+
+.trust-strip-inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  text-align: center;
+  padding: 0 var(--space-4);
+}
+
+.trust-value {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--color-text-on-dark);
+}
+
+.trust-label {
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(136, 153, 187, 0.7);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(200, 150, 42, 0.2);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Why section — Section B
+   -------------------------------------------------------------------------- */
+
+.why-section {
+  background-color: var(--color-primary-dark);
+  padding: 100px 0;
+}
+
+.why-inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* Section label (reusable) */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.section-label-line {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background-color: var(--color-gold-accent);
+  flex-shrink: 0;
+}
+
+.section-label-text {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--color-gold-accent);
+  text-transform: uppercase;
+}
+
+/* Left column */
+.why-left {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-5));
+}
+
+.why-heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 1.15;
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.01em;
+}
+
+.why-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(136, 153, 187, 0.8);
+  max-width: 38ch;
+  margin-bottom: var(--space-4);
+}
+
+.why-rule {
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-gold-accent);
+  margin-bottom: var(--space-3);
+}
+
+.why-attribution {
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(136, 153, 187, 0.4);
+  max-width: none;
+}
+
+/* Right column — differentiator cards grid */
+.why-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.diff-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 150, 42, 0.12);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  transition: border-color 300ms ease, background-color 300ms ease;
+}
+
+.diff-card:hover {
+  border-color: rgba(200, 150, 42, 0.35);
+  background-color: rgba(200, 150, 42, 0.04);
+}
+
+.diff-card-icon {
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: flex-start;
+}
+
+.diff-card-icon svg {
+  display: block;
+}
+
+.diff-card-title {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0;
+}
+
+.diff-card-text {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(136, 153, 187, 0.75);
+  max-width: none;
+}
+
+/* --------------------------------------------------------------------------
    Navigation
    -------------------------------------------------------------------------- */
 
@@ -643,6 +833,44 @@ body {
     --fs-xl: 1.5rem;
   }
 
+  /* Trust strip — 2×2 grid on mobile */
+  .trust-strip-inner {
+    flex-wrap: wrap;
+    gap: var(--space-4) 0;
+  }
+
+  .trust-item {
+    flex: 0 0 50%;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .trust-divider {
+    display: none;
+  }
+
+  /* Why section — stacked columns on mobile */
+  .why-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .why-left {
+    position: static;
+  }
+
+  .why-heading {
+    font-size: 34px;
+  }
+
+  .why-body {
+    max-width: none;
+  }
+
+  .why-right {
+    grid-template-columns: 1fr;
+  }
+
+  /* Nav */
   .nav-links {
     display: none;
   }

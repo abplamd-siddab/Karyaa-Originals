@@ -1,0 +1,73 @@
+Below the hero section on index.html, add two sections:
+
+SECTION A — Trust strip:
+  Background: rgba(200,150,42,0.06) — very subtle gold tint
+  Border top and bottom: 1px solid rgba(200,150,42,0.12)
+  Padding: 28px 0
+  Content: Four items in a horizontal row — centered, equal spacing
+
+  Item 1: 15+ Years — Indian grocery export experience
+  Item 2: UK · USA · Canada · AUS · NZ — Markets we serve
+  Item 3: 3-Month — Minimum commitment — quality guaranteed
+  Item 4: 5 Days — Staff replacement guarantee
+
+  Each item:
+    Number or key word: Cormorant Garamond 300, 32px, white
+    Label below: Jost 200, 10px, rgba(136,153,187,0.7), letter spacing 2px
+    Separated by thin vertical gold lines rgba(200,150,42,0.2)
+  
+  On mobile: wrap to 2x2 grid
+
+SECTION B — Why we are different:
+  Background: #0D1B2A
+  Padding: 100px 0
+  
+  Left column (40% width):
+    Small gold label: WHY KARYAA
+    Large heading in Cormorant Garamond 300: We are insiders. Not outsiders.
+    Size: 52px desktop, 34px mobile
+    Colour: white
+    
+    Paragraph in Jost 300, 15px, rgba(136,153,187,0.8), line height 1.8:
+    Every other staffing company serves Indian grocery importers as an outsider looking in. We are different. Our parent company — Siddab Ventures — has exported Indian groceries for 15 years. We understand your world because we live it ourselves every single day.
+    
+    A gold rule line below the paragraph: 60px wide, 1px, #C8962A
+    
+    Below the rule: karyaa.co · A division of Siddab Ventures Pvt Ltd
+    Font: Jost 200, 10px, rgba(136,153,187,0.4), letter spacing 2px
+
+  Right column (60% width):
+    Four differentiator cards in a 2x2 grid
+    Each card:
+      Background: rgba(255,255,255,0.03)
+      Border: 1px solid rgba(200,150,42,0.12)
+      Border radius: 4px
+      Padding: 28px
+      Hover: border becomes rgba(200,150,42,0.35), background rgba(200,150,42,0.04)
+      Transition: smooth 0.3s
+
+    Card 1:
+      Icon: A small gold bridge SVG mark (20px)
+      Title: Domain knowledge nobody can replicate
+      Text: 15 years in Indian grocery export. Our staff know your brands, your documentation, your suppliers. No generic BPO can say this.
+
+    Card 2:
+      Icon: Small people/team icon (use a simple SVG circle with three dots representing people)
+      Title: Warm pipeline from day one
+      Text: 400 plus importer relationships from MESHA Exports. Your first Karyaa conversation is never truly cold.
+
+    Card 3:
+      Icon: Small chain link icon (two interlocked circles)
+      Title: Ecosystem that creates loyalty
+      Text: Karyaa staffing plus Zyblz technology plus MESHA grocery supply. One trusted partner. Multiple revenue solutions.
+
+    Card 4:
+      Icon: Small shield check icon
+      Title: Self-funding model — zero risk
+      Text: Setup fee paid before we recruit. First month paid before service starts. We never spend money we have not already received from you.
+
+    Card titles: Jost 400, 14px, white
+    Card text: Jost 300, 13px, rgba(136,153,187,0.75), line height 1.7
+    Card icon area: gold #C8962A
+
+  Make the entire section responsive. On mobile: both columns become full width, stacked vertically.
