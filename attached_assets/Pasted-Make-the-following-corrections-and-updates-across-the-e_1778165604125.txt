@@ -1,0 +1,247 @@
+Make the following corrections and updates 
+across the entire Karyaa website. 
+Apply every change listed below.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 1 — TAGLINE UPDATE EVERYWHERE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Find every instance of:
+  WORK THAT BRIDGES WORLDS
+Replace with:
+  YOUR TEAM IN INDIA
+
+Apply to: navigation, hero, footer, 
+meta tags, Open Graph tags, 
+alt text, WhatsApp pre-filled message, 
+and anywhere else it appears.
+
+Increase letter spacing on the 
+new tagline to letter-spacing: 8px 
+on full size and letter-spacing: 4px 
+on compact nav and small versions.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 2 — FIX MIDDLE STATS SECTION 
+READABILITY ON HOME PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The trust strip section (15+, UK USA, 
+3-Month, 5 Days) on index.html 
+has very low contrast text on 
+the cream background — not readable.
+
+Fix:
+  Change all number text colour 
+  to #0D1B2A — dark navy — not light grey
+  Change all label text colour 
+  to #445566 — readable dark grey
+  Add a subtle top and bottom border: 
+  1px solid rgba(13,27,42,0.12)
+  Ensure the section background 
+  is #F0EDE4 — slightly darker cream
+  
+Make all text in this section 
+clearly legible at normal reading distance.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 3 — REPLACE COUNTRY LIST WITH 
+WORLDWIDE POSITIONING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Find and replace every instance of:
+  UK · USA · Canada · AUS · NZ
+  or UK, USA, Canada, Australia, New Zealand
+  or any specific 4-5 country list
+
+Replace with:
+  Worldwide
+
+In the footer markets row:
+  Remove the 5 country pills
+  Replace with a single text line:
+  Serving Indian grocery businesses worldwide
+  Font: Jost 200, 11px, rgba(136,153,187,0.55)
+  Letter spacing: 2px
+
+In the contact page details:
+  Remove the specific country pills
+  Replace with: Worldwide · Wherever 
+  Indian grocery businesses operate
+
+In meta descriptions and page titles:
+  Replace country-specific references 
+  with "worldwide" or "globally"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 4 — UPDATE POSITIONING FROM 
+IMPORTERS ONLY TO ALL INDIAN GROCERY 
+BUSINESSES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Find and replace these phrases 
+across all four pages:
+
+Replace: Indian grocery importers
+With: Indian grocery and food businesses
+
+Replace: exclusively to Indian grocery 
+importers
+With: to Indian grocery and food 
+businesses outside India
+
+Replace: for Indian grocery importers 
+and food businesses worldwide
+With: for Indian grocery and food 
+businesses worldwide
+
+This applies to:
+  Hero section descriptor paragraph
+  Services page descriptions
+  About page story paragraphs
+  Contact page heading and subheading
+  Footer brand description paragraph
+  All meta descriptions
+  WhatsApp pre-filled message
+  Any other location where 
+  importers only is mentioned
+
+The correct positioning is:
+We serve any Indian grocery or food 
+business operating outside India —
+importers, wholesalers, distributors, 
+retailers, restaurant chains, and 
+food manufacturers.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 5 — RENAME SIMRAN PRO PLUS 
+TO KARYAA PRO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Find every instance of:
+  Simran Pro Plus
+  Simran Pro+
+  Simran Pro
+
+Replace with:
+  Karyaa Pro
+
+Update the services card on services.html:
+  Title: KARYAA PRO — $450/month
+  Badge: PREMIUM · TECH + PEOPLE
+  Keep all other content the same
+  Keep pricing at $450/month
+  Keep all feature bullet points the same
+
+Update the services page comparison table 
+and any other reference to this package.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 6 — UPDATE ABOUT PAGE STATS 
+SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+In the numbers/stats section on about.html 
+update the six stats as follows:
+
+Stat 1: KEEP — 15+ Years
+  Label: In Indian grocery export
+
+Stat 2: CHANGE
+  Old: 400+ Importer relationships built
+  New: 500+ Containers exported globally
+  Label: Across all markets
+
+Stat 3: CHANGE
+  Old: 5 Countries served worldwide
+  New: Worldwide
+  Label: Wherever Indian groceries are sold
+
+Stat 4: KEEP — 5 Ventures
+  Label: In the Siddab ecosystem
+
+Stat 5: KEEP — 5 Days
+  Label: Staff replacement guarantee
+
+Stat 6: KEEP — 3 Months
+  Label: Minimum commitment — quality assured
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 7 — FIX FOOTER BOTTOM LINE 
+READABILITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The bottom strip of the footer has 
+two lines of text that are too dark 
+to read on the dark background.
+
+Fix both lines:
+
+Left line:
+  © 2026 Karyaa · A division of 
+  Siddab Ventures Pvt Ltd · 
+  All rights reserved
+  Change colour to: rgba(136,153,187,0.55)
+  Font: Jost 200, 11px, letter-spacing: 1px
+
+Right line:
+  Designed with purpose · Ahmedabad, India
+  Change colour to: rgba(136,153,187,0.45)
+  Font: Jost 200, 11px, letter-spacing: 1px
+
+Also update the footer brand description 
+paragraph text colour to:
+  rgba(136,153,187,0.70) — more readable
+  
+And update the footer service links 
+and company links colour to:
+  rgba(136,153,187,0.65) — clearly readable
+  Hover state: #FFFFFF
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 8 — ADD FAVICON
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Create a favicon for the website using 
+the Karyaa bridge mark.
+
+Generate a 32x32 pixel SVG favicon 
+that shows the bridge icon only — 
+no wordmark, no tagline:
+  Dark navy background #0D1B2A
+  Gold bridge mark #C8962A
+  Two towers with caps
+  Main cable arc
+  Key suspension cables
+  Anchor dots at base
+
+Save as: favicon.svg
+Also create: favicon.ico equivalent
+
+Add to the head section of all 
+four HTML pages:
+  <link rel="icon" type="image/svg+xml" 
+  href="favicon.svg">
+  <link rel="shortcut icon" 
+  href="favicon.svg">
+
+The favicon should be clearly 
+recognisable as the Karyaa bridge 
+mark even at 16x16 and 32x32 pixels.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 9 — FINAL VERIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+After all changes above are complete:
+
+1. Do a global search for:
+   WORK THAT BRIDGES WORLDS — must be zero
+   Simran Pro — must be zero
+   UK · USA · Canada — must be zero
+   Indian grocery importers — 
+   must be replaced with broader term
+   5 Countries — must be zero
+   400+ importer — must be zero
+
+2. Verify all four pages in preview:
+   index.html — stats section readable?
+   about.html — numbers updated?
+   services.html — Karyaa Pro package?
+   All pages — YOUR TEAM IN INDIA tagline?
+   All pages — favicon showing in browser tab?
+   Footer — bottom line readable?
+
+3. List every file that was changed 
+   and confirm all 9 changes are complete.
