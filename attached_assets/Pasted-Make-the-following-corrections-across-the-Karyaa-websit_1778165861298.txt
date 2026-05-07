@@ -1,0 +1,219 @@
+Make the following corrections across 
+the Karyaa website. Apply every change.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 1 — FIX FOOTER NAVIGATION LINKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+In the footer Company column on all 
+four pages, three links currently 
+go to the same page. Fix as follows:
+
+Add anchor IDs to about.html sections:
+  The main about/story section:
+  Add id="story" to that section's 
+  opening div tag
+
+  The ecosystem section:
+  Add id="ecosystem" to that section's 
+  opening div tag
+
+  The top of the page:
+  Add id="about" to the page hero section
+
+Update footer Company links on 
+ALL FOUR pages:
+  About Karyaa → href="about.html#about"
+  Our Story → href="about.html#story"
+  The Ecosystem → href="about.html#ecosystem"
+
+Each link must scroll smoothly to 
+its specific section on about.html.
+Smooth scroll is already enabled — 
+just ensure the anchor IDs are correct.
+
+Verify all three links go to 
+different sections — not the same place.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 2 — FIX THE ECOSYSTEM CARDS 
+ON ABOUT.HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The ecosystem section currently shows 
+incorrect cards. Replace entirely with 
+the correct five cards as follows:
+
+Remove the existing cards completely.
+Replace with these exact five cards:
+
+CARD 1 — Karyaa (active/highlighted):
+  Top border: 3px solid #0D1B2A (navy)
+  Brand name: Karyaa
+  Description: Managed remote staffing 
+  dedicated to Indian grocery and food 
+  businesses worldwide. Your dedicated 
+  team in India.
+  Domain: karyaa.co
+  Note: This card is the current company —
+  make it slightly bolder with a 
+  gold left border or active indicator
+
+CARD 2 — MESHA Exports:
+  Top border: 3px solid #0A5C6B (teal)
+  Brand name: MESHA Exports
+  Description: Merchant exporter of 
+  Indian grocery and FMCG products. 
+  15 years of trusted export relationships 
+  across global markets.
+  Domain: meshaexports.com
+
+CARD 3 — Siddab Brand:
+  Top border: 3px solid #C8962A (gold)
+  Brand name: Siddab Brand
+  Description: Own manufactured Indian 
+  food products — spices, masalas, pulses, 
+  and condiments. The mark of trust in 
+  Indian grocery worldwide.
+  Domain: siddab.com
+
+CARD 4 — Zyblz:
+  Top border: 3px solid #4A2A8A (purple)
+  Brand name: Zyblz
+  Description: Technology and digital 
+  solutions purpose-built for Indian 
+  grocery importers, distributors, and 
+  food businesses worldwide.
+  Domain: zyblz.com
+
+CARD 5 — Zyvida:
+  Top border: 3px solid #1A5C0A (green)
+  Brand name: Zyvida
+  Description: Clinically referenced 
+  Ayurvedic wellness products for the 
+  Indian diaspora and health-conscious 
+  consumers worldwide.
+  Domain: zyvida.com
+
+All cards styling:
+  Background: white
+  Border radius: 4px
+  Border: 1px solid rgba(0,0,0,0.07)
+  Padding: 24px 20px
+  Brand name: Jost 500, 13px, #0D1B2A
+  Description: Jost 300, 12px, #667788, 
+  line height 1.6
+  Domain: Jost 200, 10px, #C8962A
+  On hover: subtle shadow increase
+
+Remove completely:
+  The Siddab Ventures card 
+  (parent company — should not appear)
+  
+  The Bridgr card 
+  (this company does not exist — 
+  remove entirely)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 3 — FIX FOOTER SERVICES LIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+In the footer Services column on 
+all four pages:
+
+Find: Simran Pro Plus
+Replace with: Karyaa Pro
+
+The updated services list should be:
+  Data Entry Support
+  Research Support
+  Full Operations Support
+  Karyaa Pro
+  Pricing and Terms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 4 — TAGLINE STILL SHOWING OLD 
+VERSION IN FOOTER AND NAV
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The screenshots show the nav and footer 
+still showing: WORK THAT BRIDGES WORLDS
+
+Replace every remaining instance with:
+  YOUR TEAM IN INDIA
+
+Check specifically:
+  Navigation bar tagline under wordmark
+  Footer tagline under karyaa wordmark
+  Any other location in the codebase
+
+Do a global search for:
+  WORK THAT BRIDGES WORLDS
+  Confirm zero instances remain.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 5 — FIX FOOTER DESCRIPTION TEXT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+In the footer brand column the 
+description paragraph currently says:
+  "Dedicated India-based operations staff 
+  for Indian grocery importers worldwide"
+
+Update to:
+  "Dedicated India-based operations staff 
+  for Indian grocery and food businesses 
+  worldwide. Managed, trained, and quality 
+  monitored by people who understand 
+  your business."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 6 — FOOTER BOTTOM LINE 
+READABILITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The bottom strip text is not readable 
+on the dark background.
+
+Update both lines:
+
+Left: © 2026 Karyaa · A division of 
+Siddab Ventures Pvt Ltd · All rights reserved
+  Colour: rgba(136,153,187,0.60)
+  Font: Jost 200, 11px, letter-spacing 1px
+
+Right: Designed with purpose · Ahmedabad, India
+  Colour: rgba(136,153,187,0.50)
+  Font: Jost 200, 11px, letter-spacing 1px
+
+Also update footer service links 
+and company links:
+  Default colour: rgba(136,153,187,0.65)
+  Hover colour: #FFFFFF
+  Smooth transition 0.2s
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE 7 — REMOVE COUNTRY PILLS 
+FROM FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Remove the UK · USA · Canada · 
+Australia · NZ country pills from footer.
+
+Replace with a single text line:
+  "Serving Indian grocery and food 
+  businesses worldwide"
+  Colour: rgba(136,153,187,0.50)
+  Font: Jost 200, 11px, letter-spacing 2px
+  Margin top: 12px
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINAL VERIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+After all changes confirm:
+
+[ ] WORK THAT BRIDGES WORLDS — zero instances
+[ ] Simran Pro Plus — zero instances
+[ ] Bridgr — zero instances
+[ ] Siddab Ventures as ecosystem card — removed
+[ ] Five correct ecosystem cards showing
+[ ] Three footer company links go to 
+    different anchor sections
+[ ] Footer bottom line readable
+[ ] Country pills removed from footer
+[ ] Karyaa Pro in footer services list
+
+List all files changed and confirm done.
