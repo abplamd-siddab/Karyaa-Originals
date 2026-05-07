@@ -228,6 +228,209 @@ p {
 }
 
 /* --------------------------------------------------------------------------
+   Navigation
+   -------------------------------------------------------------------------- */
+
+:root {
+  --nav-height: 72px;
+}
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  height: var(--nav-height);
+  background-color: var(--color-primary-dark);
+  border-bottom: 1px solid rgba(200, 150, 42, 0.2);
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+.site-nav.is-scrolled {
+  background-color: rgba(13, 27, 42, 0.97);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  height: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+/* Logo group */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-logo-mark {
+  display: block;
+  height: 48px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1;
+}
+
+.nav-wordmark {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--color-text-on-dark);
+  line-height: 1;
+}
+
+.nav-tagline-small {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: rgba(200, 150, 42, 0.7);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.06em;
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+  transition: color 220ms ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-gold-accent);
+  transform: scaleX(0);
+  transition: transform 220ms ease;
+  transform-origin: left;
+}
+
+.nav-link:hover {
+  color: var(--color-gold-accent);
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.is-active {
+  color: var(--color-gold-accent);
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.nav-hamburger span {
+  display: block;
+  height: 1.5px;
+  background-color: var(--color-text-on-dark);
+  border-radius: 2px;
+  transition: transform 300ms ease, opacity 300ms ease, background-color 220ms ease;
+  transform-origin: center;
+}
+
+.nav-hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile nav panel */
+.nav-mobile-panel {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background-color: rgba(13, 27, 42, 0.98);
+  border-top: 1px solid rgba(200, 150, 42, 0.15);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 350ms ease;
+}
+
+.nav-mobile-panel.is-open {
+  max-height: 280px;
+}
+
+.nav-mobile-panel a {
+  display: block;
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--fs-base);
+  letter-spacing: 0.04em;
+  color: var(--color-text-on-dark);
+  border-bottom: 1px solid rgba(200, 150, 42, 0.08);
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.nav-mobile-panel a:hover,
+.nav-mobile-panel a.is-active {
+  color: var(--color-gold-accent);
+  background-color: rgba(200, 150, 42, 0.05);
+}
+
+/* Push page content below fixed nav */
+body {
+  padding-top: var(--nav-height);
+}
+
+/* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
 
@@ -236,5 +439,17 @@ p {
     --fs-3xl: 2.5rem;
     --fs-2xl: 2rem;
     --fs-xl: 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .nav-mobile-panel {
+    display: flex;
   }
 }
