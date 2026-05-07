@@ -35,9 +35,12 @@
 .animate-fade-down  { animation: fadeInDown 700ms ease-out both; }
 
 .delay-100 { animation-delay: 100ms; }
+.delay-150 { animation-delay: 150ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
+.delay-450 { animation-delay: 450ms; }
+.delay-600 { animation-delay: 600ms; }
 
 /* Reveal-on-scroll utility — paired with js/main.js IntersectionObserver. */
 .reveal {
@@ -49,6 +52,11 @@
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: rotate(45deg) translateY(0); opacity: 1; }
+  50%       { transform: rotate(45deg) translateY(6px); opacity: 0.5; }
 }
 
 @media (prefers-reduced-motion: reduce) {

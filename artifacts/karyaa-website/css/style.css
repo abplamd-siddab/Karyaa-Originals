@@ -228,6 +228,208 @@ p {
 }
 
 /* --------------------------------------------------------------------------
+   Homepage hero
+   -------------------------------------------------------------------------- */
+
+.hero-home {
+  position: relative;
+  min-height: calc(100vh - var(--nav-height, 72px));
+  background-color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Large watermark SVG centred behind the text */
+.hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 90vw;
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-watermark svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Main text content — left-aligned, constrained width */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: var(--space-8) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Label row: short gold line + uppercase text */
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.hero-label-line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-gold-accent);
+  flex-shrink: 0;
+}
+
+.hero-label-text {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 6px;
+  color: var(--color-gold-accent);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Main headline */
+.hero-headline {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-3);
+}
+
+/* Sub-headline — italic */
+.hero-subheadline {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* Descriptor paragraph */
+.hero-descriptor {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(136, 153, 187, 0.85);
+  max-width: 580px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+/* CTA buttons */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: var(--color-gold-accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background-color 220ms ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background-color: #d9a73d;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: transparent;
+  color: var(--color-gold-accent);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(200, 150, 42, 0.5);
+  text-decoration: none;
+  transition: border-color 220ms ease, color 220ms ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-gold-accent);
+  color: var(--color-gold-accent);
+}
+
+/* Scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  z-index: 1;
+  animation: fadeIn 800ms ease-out 1200ms both;
+}
+
+.hero-scroll-arrow {
+  width: 16px;
+  height: 16px;
+  border-right: 1.5px solid var(--color-gold-accent);
+  border-bottom: 1.5px solid var(--color-gold-accent);
+  transform: rotate(45deg);
+  animation: scrollBounce 1.8s ease-in-out infinite;
+}
+
+.hero-scroll-label {
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--color-gold-accent);
+  text-transform: lowercase;
+}
+
+/* Hero responsive overrides */
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 42px;
+  }
+
+  .hero-subheadline {
+    font-size: 26px;
+  }
+
+  .hero-content {
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
+/* --------------------------------------------------------------------------
    Navigation
    -------------------------------------------------------------------------- */
 
