@@ -2532,3 +2532,50 @@ body {
     padding-top: 20px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Narrow mobile (≤ 480 px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+  .pkg-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .terms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-right {
+    grid-template-columns: 1fr;
+  }
+
+  .ecosystem-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats-inner {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .stat-divider {
+    width: 40px;
+    height: 1px;
+  }
+
+  .trust-strip-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trust-divider {
+    width: 40px;
+    height: 1px;
+  }
+
+  .trust-item {
+    flex: none;
+    width: 100%;
+  }
+}
