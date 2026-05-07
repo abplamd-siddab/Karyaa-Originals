@@ -23,8 +23,16 @@ publicDir = "artifacts/karyaa-website/dist/public"
 serve = "static"
 
 [[services.production.rewrites]]
-from = "/*"
-to = "/index.html"
+from = "/services"
+to = "/services.html"
+
+[[services.production.rewrites]]
+from = "/about"
+to = "/about.html"
+
+[[services.production.rewrites]]
+from = "/contact"
+to = "/contact.html"
 
 [services.env]
 PORT = "21325"
