@@ -37,7 +37,7 @@
           ${BRIDGE_SVG}
           <div class="nav-logo-text">
             <span class="nav-wordmark">karyaa</span>
-            <span class="nav-tagline-small">WORK THAT BRIDGES WORLDS</span>
+            <span class="nav-tagline-small">YOUR TEAM IN INDIA</span>
           </div>
         </a>
 
