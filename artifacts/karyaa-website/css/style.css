@@ -1205,6 +1205,297 @@ body {
 }
 
 /* --------------------------------------------------------------------------
+   About page — Hero
+   -------------------------------------------------------------------------- */
+
+.about-hero {
+  position: relative;
+  height: 320px;
+  background-color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  max-width: 80vw;
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-hero-watermark svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-hero-heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 58px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-text-on-dark);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.about-hero-sub {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   About page — Story section (Section 1)
+   -------------------------------------------------------------------------- */
+
+.about-story {
+  background-color: var(--color-light-gold);
+  padding: 100px 0;
+}
+
+.about-story-inner {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.story-quote-col {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-5));
+}
+
+.story-pullquote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1.5;
+  color: var(--color-primary-dark);
+  border-left: 3px solid var(--color-gold-accent);
+  padding-left: 24px;
+  margin: 0 0 var(--space-3) 0;
+  max-width: none;
+}
+
+.story-attribution {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--color-gold-accent);
+  padding-left: 27px;
+  max-width: none;
+}
+
+.story-body-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.story-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #445566;
+  max-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   About page — Stats section (Section 2)
+   -------------------------------------------------------------------------- */
+
+.about-stats {
+  background-color: var(--color-primary-dark);
+  padding: 80px 0;
+}
+
+.about-stats-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 0 var(--space-5);
+  flex: 1;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--color-text-on-dark);
+  letter-spacing: -0.01em;
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(136, 153, 187, 0.65);
+  text-transform: uppercase;
+  line-height: 1.5;
+  max-width: 14ch;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 56px;
+  background-color: rgba(200, 150, 42, 0.18);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   About page — Ecosystem section (Section 3)
+   -------------------------------------------------------------------------- */
+
+.about-ecosystem {
+  background-color: var(--color-light-gold);
+  padding: 100px 0;
+}
+
+.ecosystem-intro {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.ecosystem-heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 42px;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.ecosystem-sub {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #667788;
+  max-width: 58ch;
+  margin-inline: auto;
+}
+
+.ecosystem-cards {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.eco-card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.eco-card:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
+  border-color: color-mix(in srgb, var(--eco-accent) 25%, transparent);
+}
+
+.eco-card-top-border {
+  height: 3px;
+  background-color: var(--eco-accent);
+  flex-shrink: 0;
+}
+
+.eco-card-body {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.eco-card-name {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--color-primary-dark);
+  line-height: 1.3;
+}
+
+.eco-card--active {
+  background: linear-gradient(160deg, #fffdf7 0%, #ffffff 60%);
+  border-color: rgba(200, 150, 42, 0.35);
+  box-shadow: 0 4px 24px rgba(200, 150, 42, 0.1);
+}
+
+.eco-card--active .eco-card-name {
+  color: var(--color-gold-accent);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.eco-card--active .eco-card-desc {
+  color: #445566;
+}
+
+.eco-card-desc {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #667788;
+  max-width: none;
+  flex: 1;
+}
+
+.eco-card-domain {
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--color-gold-accent);
+  margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
 
@@ -1303,5 +1594,68 @@ body {
 
   .nav-mobile-panel {
     display: flex;
+  }
+
+  /* About — hero */
+  .about-hero {
+    height: auto;
+    min-height: 240px;
+    padding: var(--space-6) 0;
+  }
+
+  .about-hero-heading {
+    font-size: 38px;
+  }
+
+  .about-hero-sub {
+    font-size: 20px;
+  }
+
+  /* About — story section */
+  .about-story-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .story-quote-col {
+    position: static;
+  }
+
+  .story-pullquote {
+    font-size: 22px;
+  }
+
+  /* About — stats section */
+  .about-stats-inner {
+    flex-wrap: wrap;
+    gap: var(--space-5) 0;
+  }
+
+  .stat-item {
+    flex: 0 0 50%;
+    padding: var(--space-3);
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-number {
+    font-size: 38px;
+  }
+
+  /* About — ecosystem cards: 2×2 + 1 centred */
+  .ecosystem-cards {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .eco-card {
+    flex: 0 0 calc(50% - 7px);
+  }
+
+  .eco-card:last-child {
+    flex: 0 0 calc(50% - 7px);
+    margin-inline: auto;
   }
 }
