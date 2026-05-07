@@ -1,0 +1,56 @@
+Final polish and optimisation pass for the Karyaa website.
+
+Do the following:
+
+1. Add meta tags to all four HTML pages:
+   Title tags:
+     index.html: Karyaa — Your Dedicated Team in India | Managed Remote Staffing
+     services.html: Our Services — Data Entry, Research, Operations Support | Karyaa
+     about.html: About Karyaa — Built From Within the Indian Grocery Trade
+     contact.html: Contact Karyaa — Get Your Dedicated India-Based Team
+   
+   Meta description for each page — 155 characters max, compelling and keyword-rich
+   Open Graph tags for social sharing
+   Viewport meta tag
+
+2. Add a WhatsApp floating button:
+   Fixed to bottom right of every page
+   WhatsApp green colour #25D366
+   White WhatsApp icon inside
+   On hover: slight scale up and shadow
+   On click: opens wa.me/919724445451 with pre-filled message:
+     Hi Karyaa team, I am interested in your managed staffing service for my Indian grocery business.
+   Small pulsing animation to draw attention — subtle, not annoying
+
+3. Smooth page transitions:
+   Add a very subtle fade-in when each page loads — 0.4 seconds, opacity 0 to 1
+   Add scroll-triggered fade-in for sections as they enter the viewport
+   Use Intersection Observer API for scroll animations
+   Animate: opacity 0 to 1, translateY 20px to 0, duration 0.6s ease
+
+4. Add a cookie-free analytics placeholder comment in the HTML
+   Note where Google Analytics or Plausible can be added later
+
+5. Ensure all external links open in a new tab
+
+6. Test and fix any layout issues at:
+   Mobile: 375px
+   Tablet: 768px
+   Desktop: 1280px
+   Wide: 1600px
+
+7. Add a simple loading state — the nav and hero load immediately, below-fold content fades in on scroll
+
+8. Final check:
+   All four pages link to each other correctly
+   WhatsApp button present on all pages
+   Footer on all pages
+   Nav active state correct on all pages
+   Bridge logo mark renders cleanly at all sizes
+   Gold and navy colour palette is consistent throughout
+   All text is readable — no low contrast issues
+   Contact form success message works
+   All FAQ accordions work
+   Fonts load correctly
+
+When complete — show me the full file list and confirm everything is ready for deployment to karyaa.co

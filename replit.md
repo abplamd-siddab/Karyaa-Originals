@@ -1,45 +1,74 @@
-# [Project name]
+# Karyaa Website
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A multi-page marketing website for Karyaa — a managed remote staffing company based in Ahmedabad, India, serving Indian grocery importers in the UK, USA, Canada, Australia, and New Zealand.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- `pnpm --filter @workspace/karyaa-website run dev` — run the Vite dev server
+- Preview at `/karyaa-website/` in the Replit preview pane
 
 ## Stack
 
-- pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Vanilla HTML / CSS / JavaScript (no framework)
+- Vite for dev server and bundling
+- Google Fonts: Cormorant Garamond 300/400/italic, Jost 200/300/400/500
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+```
+artifacts/karyaa-website/
+├── index.html          — Homepage (hero, trust strip, why section)
+├── services.html       — Services (4 packages, 6 commercial terms, CTA)
+├── about.html          — About (story, stats bar, Siddab ecosystem cards)
+├── contact.html        — Contact (form, details panel, FAQ accordion)
+├── css/
+│   ├── style.css       — All styles (~2700 lines, clearly sectioned)
+│   └── animations.css  — Keyframes, .reveal / .is-visible, delay utilities
+└── js/
+    ├── nav.js          — Injects shared nav HTML via insertAdjacentHTML
+    ├── main.js         — Scroll shadow, mobile hamburger, active link, reveal, year stamp
+    └── form.js         — Contact form validation, success state, FAQ accordion
+```
+
+## Brand
+
+| Token | Value |
+|---|---|
+| Primary dark | `#0D1B2A` (navy) |
+| Gold accent | `#C8962A` |
+| Light gold / off-white | `#F7F5F0` |
+| Footer bg | `#080F18` |
+| Heading font | Cormorant Garamond 300 |
+| Body font | Jost 200/300/400/500 |
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Nav is injected from `nav.js` (shared across all pages) — avoids copy-paste drift for the header.
+- Footer is inline HTML on every page (no server includes in vanilla HTML) — identical block copy-pasted into all four pages.
+- All CSS lives in one `css/style.css` file with labelled sections — intentional for a small static site.
+- `color-mix(in srgb, ...)` used in hover states — requires modern browser.
+- Active nav link detection is path-based in `main.js` (`window.location.pathname` vs `href`).
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Karyaa provides dedicated India-based operations staff to Indian grocery importers worldwide. The site explains the four service packages (Data Entry Support, Research Support, Full Operations Support, Simran Pro Plus), the commercial terms, the Siddab Ventures ecosystem, and provides a contact form.
+
+## Contact details
+
+- WhatsApp: +91 97244 45451
+- Email: info@karyaa.co
+- Location: Ahmedabad, Gujarat, India
+- Markets: UK, USA, Canada, Australia, New Zealand
+- Legal entity: Siddab Ventures Pvt Ltd
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Fonts: Cormorant Garamond 300 for headings, Jost 200/300/400/500 for body
+- Brand: navy #0D1B2A, gold #C8962A, light gold #F7F5F0
+- Tagline: "WORK THAT BRIDGES WORLDS"
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
-
-## Pointers
-
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- The bridge SVG mark is inlined everywhere (nav, hero watermarks, footer, contact details panel watermark) — update all copies if the mark changes.
+- Font import must include `Jost:wght@200;300;400;500` — all four weights are used across the site.
+- The `.container` class provides `max-width` + horizontal padding — use it inside `.footer-inner` and `.footer-bottom`.
