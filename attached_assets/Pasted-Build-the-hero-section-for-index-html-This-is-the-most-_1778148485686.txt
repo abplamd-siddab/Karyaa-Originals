@@ -1,0 +1,64 @@
+Build the hero section for index.html. This is the most important section — it must be visually striking and immediately communicate what Karyaa does.
+
+Hero section specifications:
+
+Full viewport height — 100vh
+Background: Dark navy #0D1B2A
+A large decorative version of the bridge SVG mark — centered, very large, low opacity (0.06) as a background watermark behind the text
+The bridge watermark should be approximately 600px wide positioned centrally
+
+Left-aligned text content centered vertically in the viewport:
+
+Line 1 — small label above heading:
+  Text: MANAGED REMOTE STAFFING
+  Font: Jost 300
+  Size: 11px
+  Colour: #C8962A
+  Letter spacing: 6px
+  Add a short gold line (40px) to the left of this text
+
+Line 2 — main headline:
+  Text: Your dedicated team in India.
+  Font: Cormorant Garamond 300
+  Size: 72px on desktop, 42px on mobile
+  Colour: #FFFFFF
+  Line height: 1.1
+
+Line 3 — sub headline:
+  Text: So you can focus on growing your business.
+  Font: Cormorant Garamond 300 italic
+  Size: 42px on desktop, 26px on mobile
+  Colour: rgba(255,255,255,0.6)
+
+Line 4 — descriptor paragraph:
+  Text: We provide trained, dedicated, India-based operations staff exclusively to Indian grocery importers and food businesses worldwide. Data entry. Research. Full operations support. At a fraction of local hiring cost.
+  Font: Jost 300
+  Size: 16px
+  Colour: rgba(136,153,187,0.85)
+  Max width: 580px
+  Margin top: 24px
+
+Two CTA buttons side by side:
+  Button 1 — primary: See Our Services
+    Background: #C8962A
+    Text: white, Jost 400, 13px, letter spacing 2px
+    Padding: 14px 32px
+    Border radius: 2px
+    Hover: slightly lighter gold
+
+  Button 2 — secondary: Talk to Us
+    Background: transparent
+    Border: 1px solid rgba(200,150,42,0.5)
+    Text: #C8962A, Jost 300, 13px
+    Padding: 14px 32px
+    Border radius: 2px
+    Hover: border becomes fully gold
+
+Bottom of hero — scroll indicator:
+  Small animated down arrow in gold
+  Text: scroll to explore in Jost 200, 9px, letter spacing 3px
+
+Add entrance animations:
+  All elements fade in and slide up slightly on page load
+  Staggered delays: label first, then headline, then subheadline, then paragraph, then buttons
+  Use CSS keyframes — smooth and subtle, not dramatic
