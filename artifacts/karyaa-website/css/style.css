@@ -619,6 +619,22 @@ p {
   max-width: none;
 }
 
+.diff-card-link {
+  display: inline-block;
+  margin-top: var(--space-3);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--color-gold-accent);
+  text-decoration: none;
+  transition: opacity 200ms ease;
+}
+
+.diff-card-link:hover {
+  opacity: 0.75;
+}
+
 /* --------------------------------------------------------------------------
    Navigation
    -------------------------------------------------------------------------- */
