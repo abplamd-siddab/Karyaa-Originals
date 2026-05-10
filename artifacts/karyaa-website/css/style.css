@@ -3003,6 +3003,16 @@ body {
   color: rgba(136, 153, 187, 0.50);
 }
 
+.footer-bottom a {
+  color: var(--color-gold-accent, #C8962A);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
 /* Footer responsive */
 @media (max-width: 1024px) {
   .footer-inner {
