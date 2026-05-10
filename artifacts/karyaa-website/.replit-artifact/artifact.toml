@@ -34,6 +34,22 @@ to = "/about.html"
 from = "/contact"
 to = "/contact.html"
 
+[[services.production.rewrites]]
+from = "/data-entry-support"
+to = "/data-entry-support.html"
+
+[[services.production.rewrites]]
+from = "/research-support"
+to = "/research-support.html"
+
+[[services.production.rewrites]]
+from = "/full-operations-support"
+to = "/full-operations-support.html"
+
+[[services.production.rewrites]]
+from = "/karyaa-pro"
+to = "/karyaa-pro.html"
+
 [services.env]
 PORT = "21325"
 BASE_PATH = "/"
