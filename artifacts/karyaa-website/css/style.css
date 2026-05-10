@@ -2307,6 +2307,299 @@ body {
 }
 
 /* --------------------------------------------------------------------------
+   Landing pages — shared styles (.lp-*)
+   -------------------------------------------------------------------------- */
+
+.lp-spotlight {
+  background-color: var(--color-light-gold);
+  padding: 100px 0;
+}
+
+.lp-spotlight-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.lp-price-col {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-5));
+}
+
+.lp-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 2px;
+  margin-bottom: var(--space-4);
+}
+
+.lp-package-name {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.15;
+  color: var(--color-text-on-light);
+  margin-bottom: var(--space-3);
+  max-width: none;
+}
+
+.lp-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: var(--space-2);
+}
+
+.lp-price-currency {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 26px;
+  color: var(--color-gold-accent);
+}
+
+.lp-price-amount {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 76px;
+  line-height: 1;
+  color: var(--color-text-on-light);
+}
+
+.lp-price-period {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  max-width: none;
+}
+
+.lp-price-note {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+  max-width: none;
+}
+
+.lp-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.lp-cta-btn {
+  display: inline-block;
+  padding: 15px 38px;
+  background-color: var(--color-gold-accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background-color 220ms ease;
+}
+
+.lp-cta-btn:hover {
+  background-color: #d9a73d;
+}
+
+.lp-cta-secondary {
+  display: inline-block;
+  padding: 12px 38px;
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(136, 153, 187, 0.3);
+  text-decoration: none;
+  transition: border-color 220ms ease, color 220ms ease;
+}
+
+.lp-cta-secondary:hover {
+  border-color: var(--color-gold-accent);
+  color: var(--color-gold-accent);
+}
+
+.lp-features-col {}
+
+.lp-features-heading {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-gold-accent);
+  margin-bottom: var(--space-3);
+  max-width: none;
+}
+
+.lp-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(13, 27, 42, 0.1);
+  margin-bottom: var(--space-4);
+}
+
+.lp-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(13, 27, 42, 0.1);
+}
+
+.lp-feature-check {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(200, 150, 42, 0.1);
+  margin-top: 1px;
+}
+
+.lp-feature-check svg {
+  display: block;
+}
+
+.lp-feature-text {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-on-light);
+  max-width: none;
+}
+
+.lp-guarantee-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  background-color: rgba(200, 150, 42, 0.06);
+  border-left: 2px solid var(--color-gold-accent);
+  border-radius: var(--radius-sm);
+}
+
+.lp-guarantee-note svg {
+  flex-shrink: 0;
+}
+
+.lp-guarantee-note span {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #445566;
+  max-width: none;
+}
+
+/* Why section — 3-column cards on light background */
+.lp-why-section {
+  background-color: #F0EDE4;
+  border-top: 1px solid rgba(13, 27, 42, 0.08);
+  border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+  padding: 80px 0;
+}
+
+.lp-why-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.lp-why-card {
+  padding: 36px 32px;
+  background-color: var(--color-light-gold);
+  border: 1px solid rgba(13, 27, 42, 0.08);
+  border-radius: var(--radius-md);
+}
+
+.lp-why-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--color-gold-accent);
+  margin-bottom: var(--space-3);
+  max-width: none;
+}
+
+.lp-why-title {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--color-text-on-light);
+  margin-bottom: var(--space-3);
+  letter-spacing: 0;
+}
+
+.lp-why-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #445566;
+  max-width: none;
+}
+
+/* Landing page responsive */
+@media (max-width: 900px) {
+  .lp-spotlight-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .lp-price-col {
+    position: static;
+  }
+
+  .lp-why-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .lp-price-amount {
+    font-size: 56px;
+  }
+
+  .lp-package-name {
+    font-size: 32px;
+  }
+
+  .lp-spotlight {
+    padding: 64px 0;
+  }
+
+  .lp-why-section {
+    padding: 56px 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Site footer
    -------------------------------------------------------------------------- */
 
