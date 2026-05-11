@@ -1,0 +1,31 @@
+Make three changes to the Karyaa website. Do not change any colours, fonts, animations, or design. Only change content.
+
+CHANGE 1 — Add a How It Works section on index.html, after the "We are insiders. Not outsiders." section and before any pricing CTA. Match existing section styling.
+
+Section label: HOW IT WORKS
+Heading: You manage outcomes. We manage everything else.
+Subheading: No HR. No performance reviews. No replacement headaches. Just results.
+
+Four steps as cards:
+
+1. Tell us what you need done — We start with a 45-minute discovery call. You tell us your biggest operational pain points and what good looks like. We document everything so you never have to explain it again.
+
+2. We find and train your person — We recruit from within the Indian grocery and food trade network. Your dedicated person is trained on your specific tasks before they touch a single piece of your work.
+
+3. We manage them. Daily. — You give tasks. We handle attendance, performance, quality checks, and daily oversight. If something isn't right, we fix it without you having to get involved.
+
+4. You get the work done — Daily task logs. Weekly reports. Consistent output. If your person ever leaves we replace them within 5 working days, fully trained, at no extra cost.
+
+Below the steps, add this line in italics, centred: This is not a staffing agency. This is your operations team in India, managed end to end by people who have been in the Indian grocery trade for 15 years.
+
+CHANGE 2 — Replace the four package cards on services.html. Keep all styling, only change the text.
+
+Package 1. Name: Starter. Price: $200 per month. Subtitle: For businesses drowning in data entry and catalogue work. Bullets: Product listing and catalogue updates, Order processing and tracking, Invoice creation and matching, Supplier coordination and follow-up, Weekly report every Friday. Small line: 4 hours per day, dedicated to your business only, managed by Karyaa.
+
+Package 2. Name: Growth. Price: $500 per month. Subtitle: For businesses ready to delegate their full back office. Bullets: Everything in Starter full time, Supplier research and quote comparison, Customer query handling via WhatsApp and email, Shipping document tracking and admin, Daily morning update, Dedicated WhatsApp channel with your Karyaa manager. Small line: 8 hours per day, dedicated to your business only, managed by Karyaa.
+
+Package 3. Name: Pro. Price: $1,200 per month. Subtitle: For businesses that want complete operational relief. Bullets: Two dedicated full-time staff members, Full back office coverage, Technology tools included, Weekly video call with your Karyaa account manager, Monthly performance review, Priority replacement in 3 working days. Small line: Two people, full time, complete managed service.
+
+Package 4. Name: Enterprise. Price: Custom pricing, let's talk. Subtitle: For larger operations needing a full India-based team. Bullets: Three or more dedicated staff, Custom task scope, Full integration with your existing systems, Dedicated account manager, SLA-backed delivery commitments. Small line: Built around you, contact us to discuss.
+
+CHANGE 3 — Find every instance of $450 across all pages and replace with $1,200.
