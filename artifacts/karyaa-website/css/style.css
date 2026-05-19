@@ -1348,6 +1348,17 @@ body {
   max-width: none;
 }
 
+.pkg-commitment {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: #9a7830;
+  margin-top: 8px;
+  margin-bottom: 0;
+  max-width: none;
+}
+
 /* Top subtitle — 'who this is for' line inside the card header */
 .pkg-card-top .pkg-subtitle {
   font-family: var(--font-heading);
