@@ -636,6 +636,311 @@ p {
 }
 
 /* --------------------------------------------------------------------------
+   How It Works — Section C  (stepped timeline)
+   -------------------------------------------------------------------------- */
+
+.hiw-section {
+  background-color: var(--color-primary-dark);
+  padding: 100px 0;
+  /* Slightly differentiated from the why-section via a subtle top border */
+  border-top: 1px solid rgba(200, 150, 42, 0.1);
+}
+
+.hiw-inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+/* Section header — centred, narrower */
+.hiw-header {
+  max-width: 640px;
+  margin-bottom: var(--space-7);
+}
+
+.hiw-heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 1.15;
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.01em;
+}
+
+.hiw-subhead {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(136, 153, 187, 0.8);
+  max-width: 44ch;
+}
+
+/* Steps list — vertical timeline */
+.hiw-steps {
+  position: relative;
+  /* Vertical gold rule running through the step numbers */
+  padding-left: 0;
+}
+
+/* The connecting gold line behind the numbers */
+.hiw-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;          /* vertically aligned with centre of first number */
+  bottom: 28px;
+  left: 26px;         /* centred on the 52px-wide number column */
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(200, 150, 42, 0.5),
+    rgba(200, 150, 42, 0.12)
+  );
+  pointer-events: none;
+}
+
+.hiw-step {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 0 var(--space-6);
+  padding-bottom: var(--space-7);
+  align-items: start;
+  position: relative;
+}
+
+.hiw-step--last {
+  padding-bottom: 0;
+}
+
+/* Large gold step number */
+.hiw-step-num {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 1;
+  color: var(--color-gold-accent);
+  letter-spacing: -0.02em;
+  /* White circle bg so the rule hides behind it */
+  position: relative;
+  z-index: 1;
+  padding-top: 2px;
+  text-align: center;
+}
+
+.hiw-step-content {
+  padding-top: 6px;
+  border-top: 1px solid rgba(200, 150, 42, 0.18);
+}
+
+.hiw-step-title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: var(--fs-xl);
+  line-height: 1.2;
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-3);
+  letter-spacing: 0;
+}
+
+.hiw-step-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(136, 153, 187, 0.75);
+  max-width: 60ch;
+}
+
+/* Attribution note below steps */
+.hiw-attribution {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(200, 150, 42, 0.12);
+}
+
+.hiw-attribution p {
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+  color: rgba(136, 153, 187, 0.45);
+  max-width: 72ch;
+}
+
+/* How It Works — mobile */
+@media (max-width: 600px) {
+  .hiw-heading {
+    font-size: 36px;
+  }
+
+  .hiw-steps::before {
+    display: none;
+  }
+
+  .hiw-step {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    padding-bottom: var(--space-6);
+  }
+
+  .hiw-step-num {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .hiw-step-content {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Real Projects — Section D  (editorial rows)
+   -------------------------------------------------------------------------- */
+
+.projects-section {
+  background-color: #0A1520;   /* fractionally lighter than --color-primary-dark for depth */
+  padding: 100px 0;
+  border-top: 1px solid rgba(200, 150, 42, 0.1);
+}
+
+.projects-inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+/* Section header */
+.projects-header {
+  max-width: 640px;
+  margin-bottom: var(--space-7);
+}
+
+.projects-heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 1.15;
+  color: var(--color-text-on-dark);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.01em;
+}
+
+.projects-subhead {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(136, 153, 187, 0.8);
+  max-width: 44ch;
+}
+
+/* Project rows list */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each project row — editorial 3-column strip */
+.project-row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 3fr;
+  gap: 0 var(--space-6);
+  padding: var(--space-5) 0;
+  border-top: 1px solid rgba(200, 150, 42, 0.18);
+  align-items: baseline;
+  transition: background-color 250ms ease;
+}
+
+.project-row:last-child {
+  border-bottom: 1px solid rgba(200, 150, 42, 0.18);
+}
+
+.project-row:hover {
+  background-color: rgba(200, 150, 42, 0.03);
+}
+
+/* Project name — left column */
+.project-name {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: var(--fs-lg);
+  line-height: 1.3;
+  color: var(--color-text-on-dark);
+  letter-spacing: 0;
+}
+
+/* Duration / scope tag — centre column */
+.project-scope {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold-accent);
+  white-space: nowrap;
+  padding: 4px 10px;
+  border: 1px solid rgba(200, 150, 42, 0.35);
+  border-radius: 2px;
+  display: inline-block;
+  align-self: center;
+}
+
+/* Outcome description — right column */
+.project-outcome {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(136, 153, 187, 0.75);
+  max-width: none;
+}
+
+/* CTA row beneath the project list */
+.projects-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(200, 150, 42, 0.1);
+  flex-wrap: wrap;
+}
+
+.projects-cta p {
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: rgba(136, 153, 187, 0.5);
+  max-width: none;
+}
+
+/* Real Projects — mobile */
+@media (max-width: 768px) {
+  .projects-heading {
+    font-size: 36px;
+  }
+
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    padding: var(--space-4) 0;
+  }
+
+  .project-scope {
+    align-self: flex-start;
+  }
+
+  .projects-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Navigation
    -------------------------------------------------------------------------- */
 
