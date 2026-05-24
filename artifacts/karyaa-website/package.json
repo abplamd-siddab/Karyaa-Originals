@@ -10,12 +10,11 @@
     "typecheck": "echo 'no typecheck (vanilla JS project)'"
   },
   "devDependencies": {
-  "@replit/vite-plugin-cartographer": "^0.5.1",
-  "@replit/vite-plugin-dev-banner": "^0.1.1",
-  "@replit/vite-plugin-runtime-error-modal": "^0.0.6",
-  "@types/node": "^25.3.3",
-  "vite": "^7.3.2"
-}  
+    "@replit/vite-plugin-cartographer": "^0.5.1",
+    "@replit/vite-plugin-dev-banner": "^0.1.1",
+    "@replit/vite-plugin-runtime-error-modal": "^0.0.6",
+    "@types/node": "^25.3.3",
+    "vite": "^7.3.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
